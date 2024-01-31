@@ -1,0 +1,54 @@
+
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'register/register.css' %}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registracija</title>
+
+</head>
+<body>
+
+
+<div id="headerContainer">
+    <div id="bigHeader">
+        <h1 style="font-size: 70px;" id="glavniNaslov">TargetList</h1>
+        <img id="logo" src="{% static 'home/target2.png' %}">
+        <ul id="navigationBar">
+            <li class="headerLista"><a class="navigationLink" href="{% url 'home' %}">Povratak na glavnu stranicu</a></li>
+        </ul>
+    </div>
+</div>
+
+  <h2 id="registerNaslov">Registracija</h2>
+    <form method="post">
+        {% csrf_token %}
+
+        <label for="id_username">Korisničko ime:</label>
+        <input type="text" id="id_username" name="username" required>
+
+        <label for="id_first_name">Unesite Vaše ime:</label>
+        <input type="text" id="id_first_name" name="first_name" required>
+
+        <label for="id_last_name">Unesite Vaše prezime:</label>
+        <input type="text" id="id_last_name" name="last_name" required>
+
+        <label for="id_email">Unesite Vaš email:</label>
+        <input type="email" id="id_email" name="email" required>
+
+        <label for="id_password1">Unesite Vašu lozinku:</label>
+        <input type="password" id="id_password1" name="password1" required>
+
+        <label for="id_password2">Potvrdite Vašu lozinku:</label>
+        <input type="password" id="id_password2" name="password2" required>
+
+        <button type="submit">Registrujte se</button>
+
+        {% if form.errors %}
+            <p class="error">Napravili ste grešku! Molimo Vas da provjerite formu</p>
+        {% endif %}
+    </form>
+</body>
+</html>

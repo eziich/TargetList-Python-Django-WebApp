@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'home/home.css' %}">
+    <meta charset="UTF-8">
+    <title>Target List</title>
+</head>
+<body style="background-color: white;">
+
+<div id="headerContainer">
+    <div id="bigHeader">
+        <h1 style="font-size: 70px;" id="glavniNaslov">TargetList</h1>
+        <img id="logo" src="{% static 'home/target2.png' %}">
+        <ul id="navigationBar">
+            <li class="headerLista"><a class="navigationLink" href="register">Registracija</a></li>
+            <li class="headerLista"><a class="navigationLink" href="login/">Prijava</a></li>
+            <li class="headerLista"><a class="navigationLink" href="about/">TargetList</a></li>
+        </ul>
+    </div>
+</div>
+
+<div id="pictureContainer">
+    <img id="mainSlika" src="{% static 'home/target1.png' %}">
+    <br>
+</div>
+
+<div id="textContainer">
+    <h1 id="textNaslov">Zašto TargetList? </h1>
+    <ul id="textLista">
+        <li class="textItem">U svakom trenutku imate pregled Vaših obaveza i zadataka</li>
+        <br>
+        <li class="textItem">Kreirajte, ažurirajte ili brišite Vašu lista zadataka</li>
+        <br>
+        <li class="textItem">Potpuno besplatan alat</li>
+        <br>
+        <li class="textItem">Prilagođen korisnički interfejs</li>
+        <br>
+        <li class="textItem">Jednostavnost i efikasnost</li>
+        <br>
+        <li class="textItem">Potrebno je samo da se registrujete i prijavite</li>
+    </ul>
+</div>
+
+
+<div id="contentContainer">
+    <div class="spot">
+        <img id="contentSlike1" src="{% static 'home/register.png' %}">
+        <div class="overlay-text">1.) Register</div>
+    </div>
+    <div class="spot">
+        <img id="contentSlike2" src="{% static 'home/login.png' %}">
+        <div class="overlay-text">2.) Login</div>
+    </div>
+    <div class="spot">
+        <img id="contentSlike3" src="{% static 'home/target3.png' %}">
+        <div class="overlay-text">3.) TargetList</div>
+    </div>
+</div>
+
+
+
+<footer id="footer">
+    <div class="footer-content">
+        <ul id="contactList">Kontaktirajte nas putem:</ul>
+            <li class="contactItem">Email: TargetList@gmail.com</li>
+            <br>
+            <li class="contactItem">Broj telefona: 037-123-456</li>
+            <br>
+            <li class="contactItem">Poslovni centar: ABC</li>
+            <br>
+    </div>
+    <img id="sign" src="{% static 'home/signature2.png' %}">
+</footer>
+
+
+
+
+</body>
+</html>

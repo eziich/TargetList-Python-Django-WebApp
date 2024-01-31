@@ -1,0 +1,224 @@
+#headerContainer{
+    text-align:center;
+}
+
+#bigHeader{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#glavniNaslov{
+    color:black;
+    margin: 0 ;
+    display: inline-block;
+    box-sizing: border-box:
+}
+
+
+#navigationBar{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+
+}
+
+
+#navigationBar a:hover {
+    color: red;
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+.headerLista {
+    display:inline-block;
+    margin: 0px;
+    float: left;
+    background-color: white;
+}
+
+
+.navigationLink {
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+    font-size: 30px;
+    position: relative;
+    transition: color 0.3s ease-in-out;
+}
+
+.navigationLink:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.navigationLink:hover {
+    color: red;
+}
+
+.navigationLink:hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0.5);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navigationLink:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+#logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#logo{
+    width: 100px;
+    height: 80px;
+}
+
+a:hover{
+    transform: scale(2);
+}
+
+#aboutContainer{
+    padding-top: 50px;
+}
+
+
+#pictureContainer{
+    margin-top:120px;
+    text-align:center;
+}
+
+#mainSlika{
+    height: 600px;
+}
+
+#textContainer {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#textNaslov{
+    font-size:45px;
+}
+
+#textLista {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0; /* Remove default padding */
+}
+
+.textItem {
+    text-align: center; /* Align text to the center */
+    margin: 0; /* Reset default margin */
+    padding: 0; /* Reset default padding */
+    line-height: 1.5; /* Adjust line height for better spacing */
+    font-size: 25px;
+}
+
+.textItem:before {
+    content: "\2022";
+    display: inline-block;
+    width: 1em;
+    text-align: right;
+    margin-right: 0.5em;
+}
+
+.textItem:hover{
+    transform:scale(1.1);
+    transition: transform 0.4s ease-in-out;
+}
+
+
+#contentContainer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 550px;
+}
+
+.spot {
+    position: relative;
+    margin-top: 20px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid #ccc;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-text {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    box-sizing: border-box;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+}
+
+.spot:hover .overlay-text {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+#contentSlike1 {
+    width: 600px;
+    height: 400px;
+}
+
+#contentSlike2 {
+    width: 600px;
+    height: 350px;
+}
+
+#contentSlike3 {
+    width: 500px;
+}
+
+
+#footer{
+    background-color:rgba(10, 10, 10, 0.9);
+    text-align: center;
+}
+
+#contactList{
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.contactItem{
+    text-align: center;
+    color: white;
+}

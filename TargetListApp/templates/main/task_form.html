@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dodaj / Ažuriraj zadatak</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/task_form.css' %}">
+</head>
+<body>
+    <div class="container">
+        <div class="header-container">
+        <h1 class="header-title">
+            Dodaj / Ažuriraj zadatak
+            <img src="{% static 'main/logo.png' %}" class="logo">
+        </h1>
+    </div>
+        <form method="post" action="">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="{{ form.task_name.id_for_label }}">Naziv zadatka:</label>
+                {{ form.task_name }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.task_description.id_for_label }}">Opis zadatka:</label>
+                {{ form.task_description }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.task_priority.id_for_label }}">Prioritet zadatka:</label>
+                {{ form.task_priority }}
+            </div>
+            <div class="form-group">
+                <label for="{{ form.task_status.id_for_label }}">Status zadatka:</label>
+                {{ form.task_status }}
+            </div>
+            <button type="submit">Spremi</button>
+        </form>
+        <a href="{% url 'task_list' %}">Povratak na listu zadataka</a>
+    </div>
+</body>
+</html>

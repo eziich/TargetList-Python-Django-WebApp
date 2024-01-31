@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista zadataka</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/task_list.css' %}">
+</head>
+<body>
+    <div id="headerContainer">
+        <div id="bigHeader">
+            <h1 style="font-size: 70px;" id="glavniNaslov">TargetList</h1>
+            <img id="logo" src="{% static 'home/target2.png' %}">
+            <h2 id="helloUser">Zdravo, {{ request.user.username }}!</h2><br>
+        </div>
+    </div>
+
+
+    <a href="{% url 'task_create' %}" id="addTaskLink">Dodaj novi zadatak</a><br>
+    <h2 id="taskListTitle">Lista Vaših zadataka:</h2>
+
+    <ul id="taskList">
+        {% for task in tasks %}
+            <li>
+                <u><strong>Naziv zadatka:</strong></u> {{ task.task_name }} <br>
+                <br>
+                <u><strong>Opis zadatka:</strong></u> {{ task.task_description }} <br>
+                <br>
+                <u><strong>Prioritet zadatka:</strong></u> {{ task.task_priority }} <br>
+                <br>
+                <u><strong>Status zadatka:</strong></u> {{ task.task_status }} <br>
+                <br>
+                <a href="{% url 'task_update' task.id %}" class="updateLink">Ažuriraj</a>
+                <a href="{% url 'task_delete' task.id %}" class="deleteLink">Obriši</a>
+            </li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'logout' %}" id="logoutLink">Odjavi se</a>
+
+<footer id="footer">
+    <div class="footer-content">
+        <ul id="contactList">Kontaktirajte nas putem:</ul>
+            <li class="contactItem">Email: TargetList@gmail.com</li>
+            <br>
+            <li class="contactItem">Broj telefona: 037-123-456</li>
+            <br>
+            <li class="contactItem">Poslovni centar: ABC</li>
+            <br>
+    </div>
+    <img id="sign" src="{% static 'home/signature2.png' %}">
+</footer>
+
+
+
+</body>
+</html>

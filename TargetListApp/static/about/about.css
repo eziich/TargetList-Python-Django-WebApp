@@ -1,0 +1,157 @@
+#headerContainer{
+    text-align:center;
+}
+
+#bigHeader{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+
+#glavniNaslov{
+    color:black;
+    margin: 0 ;
+    display: inline-block;
+    box-sizing: border-box:
+}
+
+
+#navigationBar{
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    margin-top: 10px;
+
+}
+
+
+#navigationBar a:hover {
+    color: red;
+    transform: scale(1.1);
+    display: inline-block;
+}
+
+.headerLista {
+    display:inline-block;
+    margin: 0px;
+    float: left;
+    background-color: white;
+}
+
+
+#logo-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#logo{
+    width: 100px;
+    height: 80px;
+}
+
+
+.navigationLink {
+    text-decoration: none;
+    color: black;
+    margin-right: 30px;
+    font-size: 30px;
+    position: relative;
+    transition: color 0.4s ease-in-out;
+}
+
+.navigationLink:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.4s ease-in-out;
+}
+
+
+.navigationLink:hover {
+    color: red;
+}
+
+.navigationLink:hover:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: red;
+    bottom: -5px;
+    left: 0;
+    transform: scaleX(0.5);
+    transform-origin: bottom right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navigationLink:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+#aboutTextContainer1{
+    text-align: center;
+    padding-top: 50px;
+}
+
+#aboutText1{
+    color:black;
+}
+
+#aboutSlikaContainer1{
+    text-align: center;
+    padding-top: 20px;
+}
+
+#aboutSlika1{
+    height: 500px;
+}
+
+
+#aboutSlikaContainer2{
+    text-align: center;
+    padding-bottom: 0px;
+}
+
+#aboutSlika2{
+    height: 500px;
+}
+
+#aboutTextContainer2{
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+#aboutText2{
+    color:black;
+}
+
+
+
+#footer{
+    background-color:rgba(10, 10, 10, 0.9);
+    text-align: center;
+}
+
+#contactList{
+    color: white;
+    display: inline-block;
+    font-size: 30px;
+}
+
+.contactItem{
+    text-align: center;
+    color: white;
+}

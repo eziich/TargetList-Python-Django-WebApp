@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'login/login.css' %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prijava</title>
+    <!-- Add any additional styles or scripts here -->
+</head>
+<body>
+
+<div id="headerContainer">
+    <div id="bigHeader">
+        <h1 style="font-size: 70px;" id="glavniNaslov">TargetList</h1>
+        <img id="logo" src="{% static 'home/target2.png' %}">
+        <ul id="navigationBar">
+            <li class="headerLista"><a class="navigationLink" href="{% url 'home' %}">Povratak na glavnu stranicu</a></li>
+        </ul>
+    </div>
+</div>
+
+  <h2 id="loginNaslov">Prijava</h2>
+  <form method="post" action="{% url 'login' %}">
+    {% csrf_token %}
+    <label for="id_username">Korisničko ime:</label>
+    <input type="text" id="id_username" name="username" required>
+
+    <label for="id_password">Lozinka:</label>
+    <input type="password" id="id_password" name="password" required>
+
+    <button type="submit">Prijava</button>
+
+    {% if form.errors %}
+        <p class="error">Niste unijeli ispravno korisničko ime ili lozinku, pokušajte ponovo.</p>
+    {% endif %}
+  </form>
+</body>
+</html>
